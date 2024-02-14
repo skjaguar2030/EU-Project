@@ -22,9 +22,9 @@ const app = Vue.createApp({
       this.showBooks = !this.showBooks
     },
 
-    // handleEvent(e) {
-    //   console.log(e);
-    // }
+    handleEvent(e) {
+      console.log(e);
+    }
   }
 });
 
