@@ -4,23 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
-    <style>
-      .box {
-        padding: 100px 0;
-        width: 400px;
-        text-align: center;
-        background: #ddd;
-        margin: 20px;
-        display: inline-block;
-      }
-    </style>
   </head>
   <body>
     <h1>Hello Vue :)</h1>
 
     <div id="app">
       <div v-if="showBooks">
-        <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <!-- <p>{{ title }} - {{ author }} - {{ age }}</p> -->
+
+        <div>
+          <ul>
+            <li v-for="book in books">
+              <p style="color: red; font-size: 40px">{{ book.title }}</p>
+              <p>{{ book.author }}</p>
+            </li>
+          </ul>
+        </div>
 
         <button @click="age++">Increase Age</button>
         <button @click="age--">Decrease Age</button>
@@ -37,14 +36,6 @@
         <span v-if="showBooks">HIDE BOOKS</span>
         <span v-if="!showBooks">SHOW BOOKS</span>
       </button>
-
-      <br />
-      <!-- mouse events -->
-
-      <div class="box" @mouseover="handleEvent">mouse over</div>
-      <div class="box" @mouseleave="handleEvent">mouse leave</div>
-      <div class="box" @dblclick="handleEvent">double click</div>
-      <div class="box"></div>
     </div>
     <script src="app.js"></script>
   </body>

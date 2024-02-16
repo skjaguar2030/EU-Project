@@ -3,10 +3,16 @@ const app = Vue.createApp({
 
   data() {
     return {
-        showBooks: true,
-        title: "The Final Empire",
-        author: "Brandon Senderson",
-        age: 45
+      showBooks: true,
+      title: "The Final Empire",
+      author: "Brandon Senderson",
+      age: 45,
+      
+          books: [  
+            {title: "Some Book", author: "Some guy"},
+            {title: "Some Book", author: "Some guy"},
+            {title: "Some Book", author: "Some guy"}
+          ]
     }
   },
 
@@ -24,7 +30,7 @@ const app = Vue.createApp({
 
     handleEvent(e) {
       console.log(e);
-    }
+    },
   }
 });
 
